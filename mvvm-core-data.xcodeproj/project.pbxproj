@@ -13,6 +13,9 @@
 		686118702B8A778C00B1FD42 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6861186F2B8A778C00B1FD42 /* Preview Assets.xcassets */; };
 		686118722B8A778C00B1FD42 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686118712B8A778C00B1FD42 /* Persistence.swift */; };
 		686118752B8A778C00B1FD42 /* mvvm_core_data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 686118732B8A778C00B1FD42 /* mvvm_core_data.xcdatamodeld */; };
+		686118802B8A77FD00B1FD42 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6861187F2B8A77FD00B1FD42 /* ViewModel.swift */; };
+		686118822B8A786E00B1FD42 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686118812B8A786E00B1FD42 /* ButtonsView.swift */; };
+		686118842B8A78AC00B1FD42 /* AnimalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686118832B8A78AC00B1FD42 /* AnimalsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		6861186F2B8A778C00B1FD42 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		686118712B8A778C00B1FD42 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		686118742B8A778C00B1FD42 /* mvvm_core_data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mvvm_core_data.xcdatamodel; sourceTree = "<group>"; };
+		6861187F2B8A77FD00B1FD42 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		686118812B8A786E00B1FD42 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		686118832B8A78AC00B1FD42 /* AnimalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +61,11 @@
 		686118672B8A778A00B1FD42 /* mvvm-core-data */ = {
 			isa = PBXGroup;
 			children = (
-				686118682B8A778A00B1FD42 /* mvvm_core_dataApp.swift */,
-				6861186A2B8A778A00B1FD42 /* ContentView.swift */,
+				6861187C2B8A77DC00B1FD42 /* App */,
+				6861187E2B8A77EF00B1FD42 /* ViewModel */,
+				6861187D2B8A77E600B1FD42 /* Model */,
+				6861187B2B8A77D500B1FD42 /* View */,
 				6861186C2B8A778C00B1FD42 /* Assets.xcassets */,
-				686118712B8A778C00B1FD42 /* Persistence.swift */,
-				686118732B8A778C00B1FD42 /* mvvm_core_data.xcdatamodeld */,
 				6861186E2B8A778C00B1FD42 /* Preview Content */,
 			);
 			path = "mvvm-core-data";
@@ -71,6 +77,41 @@
 				6861186F2B8A778C00B1FD42 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6861187B2B8A77D500B1FD42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6861186A2B8A778A00B1FD42 /* ContentView.swift */,
+				686118812B8A786E00B1FD42 /* ButtonsView.swift */,
+				686118832B8A78AC00B1FD42 /* AnimalsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6861187C2B8A77DC00B1FD42 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				686118682B8A778A00B1FD42 /* mvvm_core_dataApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6861187D2B8A77E600B1FD42 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				686118732B8A778C00B1FD42 /* mvvm_core_data.xcdatamodeld */,
+				686118712B8A778C00B1FD42 /* Persistence.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6861187E2B8A77EF00B1FD42 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6861187F2B8A77FD00B1FD42 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				686118822B8A786E00B1FD42 /* ButtonsView.swift in Sources */,
+				686118802B8A77FD00B1FD42 /* ViewModel.swift in Sources */,
 				686118722B8A778C00B1FD42 /* Persistence.swift in Sources */,
 				6861186B2B8A778A00B1FD42 /* ContentView.swift in Sources */,
 				686118752B8A778C00B1FD42 /* mvvm_core_data.xcdatamodeld in Sources */,
+				686118842B8A78AC00B1FD42 /* AnimalsView.swift in Sources */,
 				686118692B8A778A00B1FD42 /* mvvm_core_dataApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
