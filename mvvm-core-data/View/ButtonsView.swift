@@ -25,6 +25,13 @@ struct ButtonsView: View {
                 Text("Add Dog")
             }
             .padding()
+            
+            Button {
+                viewModel.showCoverView = true
+            } label: {
+                Text("Show CoverView")
+            }
+            .padding()
         }
     }
 }

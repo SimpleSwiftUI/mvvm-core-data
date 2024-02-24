@@ -12,6 +12,7 @@ import CoreData
 class ViewModel: ObservableObject {
     private var managedObjectContext: NSManagedObjectContext
     
+    @Published var showCoverView = false
     @Published var animalEntities: [AnimalEntity] = []
     
     init(context: NSManagedObjectContext) {
