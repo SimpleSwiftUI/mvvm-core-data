@@ -2,6 +2,8 @@
 
 `mvvm-core-data` is a simple iOS project created by SimpleSwiftUI, demonstrating the basics of implementing the Model-View-ViewModel (MVVM) architecture along with Core Data for persistent storage. This project is designed to help Swift and SwiftUI developers understand how to manage data within their iOS applications effectively.
 
+![mvvm-core-data screen recording](https://imgur.com/nvlO4B5)
+
 ## Features
 
 - Basic MVVM Architecture implementation.

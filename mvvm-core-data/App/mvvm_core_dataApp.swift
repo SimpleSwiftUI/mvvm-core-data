@@ -10,11 +10,18 @@ import SwiftUI
 @main
 struct mvvm_core_dataApp: App {
     let persistenceController = PersistenceController.shared
+    @StateObject var viewModel: ViewModel
 
+    init() {
+        let context = persistenceController.container.viewContext
+        _viewModel = StateObject(wrappedValue: ViewModel(context: context))
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                // .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(viewModel)
         }
     }
 }

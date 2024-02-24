@@ -22,6 +22,9 @@ struct AnimalsView: View {
                 .padding()
             }
         }
+        .id(viewModel.refreshID)    // on older iOS versions, sometimes the view
+                                    // does not update after modifying Core Data
+                                    // refreshID forces a view refresh
     }
 }
 

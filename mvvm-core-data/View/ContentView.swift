@@ -17,9 +17,9 @@ struct ContentView: View {
             
             AnimalsView()
         }
-        .fullScreenCover(isPresented: $viewModel.showCoverView, content: {
+        .fullScreenCover(isPresented: $viewModel.showCoverView) {
             CoverView()
-        })
+        }
     }
 }
 

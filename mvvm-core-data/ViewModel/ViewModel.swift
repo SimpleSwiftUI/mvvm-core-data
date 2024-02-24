@@ -14,6 +14,7 @@ class ViewModel: ObservableObject {
     
     @Published var showCoverView = false
     @Published var animalEntities: [AnimalEntity] = []
+    @Published var refreshID = UUID()   // trick to force view refresh on older iOS versions
     
     init(context: NSManagedObjectContext) {
         self.managedObjectContext = context
@@ -24,6 +25,7 @@ class ViewModel: ObservableObject {
         request.sortDescriptors = [NSSortDescriptor(keyPath: \AnimalEntity.updatedAt, ascending: true)]
         do {
             animalEntities = try managedObjectContext.fetch(request)
+            refreshID = UUID()
         } catch {
             print("coreDataAnimalEntitiesFetch error: \(error.localizedDescription)")
         }
@@ -37,6 +39,7 @@ class ViewModel: ObservableObject {
         
         do {
             try managedObjectContext.save()
+            coreDataAnimalEntitiesFetch()
             print("New animal entity saved.")
         } catch {
             print("addAnimal error: \(error.localizedDescription)")
